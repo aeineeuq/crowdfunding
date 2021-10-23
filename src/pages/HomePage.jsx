@@ -10,8 +10,8 @@ function HomePage() {
             .then((results) => {
                 return results.json();
         })
-            .then((data) => {
-                setProjectList(data);
+             .then((data) => {
+                  setProjectList(data);
         });
     }, []);
 
