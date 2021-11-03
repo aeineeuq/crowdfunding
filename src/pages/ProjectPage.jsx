@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+
 
 function ProjectPage() {
     const [projectData, setProjectData] = useState({ pledges: [] });
     const { id } = useParams();
+    // const history = useHistory
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}projects/${id}`)
@@ -25,7 +27,7 @@ function ProjectPage() {
             {projectData.pledges.map((pledgeData, key) =>{
                 return (
                 <li>
-                {pledgeData.amount} from {pledgeData.supporter}
+                {pledgeData.amount} from {pledgeData.supporter} and says {pledgeData.comment}
                 </li>
                 );
             })}
@@ -33,5 +35,17 @@ function ProjectPage() {
             </div>
         );
     }
-                    
+
+
+    // const deleteProject = async () => {
+    //     await fetch(`${process.env.REACT_APP_API_URL}projects/${project_id}`,{
+    //         method: "delete",
+    //         headers: {
+    //             "Authorization": `Token ${localStorage.getItem(getItem('token'))}`
+    //         }
+    //     })
+    //     history.pushState('/')
+    // }
+    
+
     export default ProjectPage;
