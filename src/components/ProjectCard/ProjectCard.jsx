@@ -7,8 +7,8 @@ function ProjectCard(props) {
     return (
         <div className="project-card">
         <Link to={`/project/${projectData.id}`}>
-        <img src={projectData.image}/>
-        <h3>{projectData.title}</h3>
+        <li><img src={projectData.image}/></li>
+        <li>{projectData.title}</li>
         </Link>
         </div>
     );
