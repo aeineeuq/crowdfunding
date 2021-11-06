@@ -19,7 +19,6 @@ const LoginForm = () => {
   }
 
     const postData = async () => {
-    console.log("Im logging in")
     const response = await fetch(`${process.env.REACT_APP_API_URL}api-token-auth/`, {
       method: "post",
       headers: {
@@ -35,7 +34,6 @@ const LoginForm = () => {
     if (credentials.username && credentials.password) {
       postData().then((response) => {
         window.localStorage.setItem("token", response.token);
-        console.log(response, response.token)
         history.push('/')
       })
     }

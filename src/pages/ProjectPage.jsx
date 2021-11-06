@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import PledgeButton from '../components/PledgeButton';
-
+import "../App.css";
 
 function ProjectPage() {
     const [projectData, setProjectData] = useState({ pledges: [] });
@@ -16,7 +16,7 @@ function ProjectPage() {
     }, []);
 
     return (
-        <div>
+        <div id="projectcard">
             <div class="aside">
                 <img src={projectData.image} />
                 <PledgeButton />

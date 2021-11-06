@@ -2,15 +2,15 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route }from 'react-router-dom';
 import Nav from './components/Nav/Nav';
+import Footer from './components/Nav/Footer';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import ProjectPage from './pages/ProjectPage';
-import UserPage from './pages/UserPage';
 import CreateProjectPage from './pages/CreateProjectPage'
 import Register from './pages/RegisterPage'
 import EditProjectPage from './pages/EditProjectPage';
 import PostPledge from './pages/PostPledge';
-import Footer from './components/Nav/Footer';
+import ErrorPage from './pages/Error';
 
 function App() {
   return (
@@ -19,22 +19,25 @@ function App() {
      <Nav />
    
     <Switch>
+       <Route path="/error">
+          <ErrorPage />
+        </Route>
         <Route path="/project/:id">
           <ProjectPage />
         </Route>
+        <Route  path='/createproject'>
+            <CreateProjectPage />
         <Route path="/editproject/:id">
             <EditProjectPage />
           </Route>
-        <Route path="/users/:id">
+        {/* <Route path="/users/:id">
             <UserPage />
+        </Route> */}
         </Route>
-        <Route exact path='/createproject'>
-            <CreateProjectPage />
-        </Route>
-        <Route exact path='/postpledge'>
+        <Route path='/postpledge'>
             <PostPledge />
         </Route>
-        <Route exact path='/register'>
+        <Route path='/register'>
             <Register />
         </Route>
         <Route path="/login">
