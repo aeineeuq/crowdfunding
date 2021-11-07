@@ -87,7 +87,7 @@ const CreateProjectForm = () => {
     return(
       <div className="cside">
       <h3>Post Your Pawtreon Project!</h3>
-      <form id="project-form">
+      <form>
         <div>
           <label>Project Title: </label>
           <input 

@@ -90,14 +90,11 @@ div.cside {
 form {
   display: table;
   padding: 10px;
+  text-align: center;
   }
 
-#project-form {
-  max-width: 80vw;
-}
-
 #title, #image, #goal, #location {
-  min-width: 50vw;
+  min-width: 70vw;
 }
 
 #description {
@@ -106,6 +103,7 @@ form {
 }
 
 label {
+  width: 100vw;
   display: table-cell;
   text-align: center;
 }
@@ -116,11 +114,6 @@ input{
   margin-bottom: 10px;
   word-wrap: break-word;
 }
-
-
-/* textarea{
-  width: 600px;
-} */
 
 button{
   background-color: #9B2D1F;

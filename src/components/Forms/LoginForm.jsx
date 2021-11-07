@@ -39,6 +39,7 @@ const LoginForm = () => {
         console.log(window.location)
         window.location=`${window.location.origin}/`
         history.push("/");
+        // history.push("/CreateProjectPage");
         console.log(response);
         console.log(window.location)
         window.location = `${window.location.origin}/`
@@ -50,7 +51,7 @@ const LoginForm = () => {
     <div className="cside">
     <form onSubmit={handleSubmit}>
       <div>
-        <h2>Ready to make a pawsitive change? </h2>
+        <h3>Ready to make a pawsitive change? </h3>
         <h2>Sign-in</h2>
         <label>Username: </label>
         <input
@@ -65,7 +66,7 @@ const LoginForm = () => {
         <input
           type="password"
           id="password"
-          placeholder="Password"
+          placeholder="Enter password"
           onChange={handleChange}
         />
       </div>

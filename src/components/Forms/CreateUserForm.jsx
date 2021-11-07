@@ -36,14 +36,16 @@ function RegisterForm() {
                         <label>Username:</label>
                         <input
                         type="text" 
-                        id="username" 
+                        id="username"
+                        placeholder="Username" 
                         onChange={handleChange} />
                     </div>                  
                     <div>
                         <label>Email:</label>
                         <input
                         type="text" 
-                        id="email" 
+                        id="email"
+                        placeholder="Email" 
                         onChange={handleChange} />
                     </div>
                     <div>
@@ -51,6 +53,7 @@ function RegisterForm() {
                         <input
                         type="password" 
                         id="password" 
+                        placeholder="Password"
                         onChange={handleChange} />
                     </div>
                     <button type="submit" onClick={handleSubmit}>Sign Up</button>
