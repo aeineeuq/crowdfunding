@@ -39,6 +39,7 @@ h3 {
 
 p {
   font-family: 'Calibri', sans-serif;
+  display: table-row;
   padding: 3px 14px;
 }
 
@@ -57,21 +58,21 @@ li{
   padding: 10px;
 }
 
-#projectcard{
+#projectcard {
   display: flex;
   column-gap: 10px;
   row-gap: 10px;
   padding: 10px;
 }
 
-div.aside{
+div.aside {
   border-top-left-radius:0px;
   border-bottom-right-radius:25px;
   width: 25vw;
   /* min-height: 90vh; */
   }
 
-div.bside{
+div.bside {
   display:inline-block;
   background-color: #A28E6A;
   color: #f9f9f9;
@@ -79,32 +80,47 @@ div.bside{
   /* min-height:90vh; */
 }
 
-div.cside{
+div.cside {
   background-color: #CAB0A8;
   text-align: left;
   padding: 10px;
-  height: 30vw;
+  min-height: 30vw;
 }
 
-label{
-  /* display: table-cell; */
+form {
+  display: table;
+  padding: 10px;
+  }
+
+#project-form {
+  max-width: 80vw;
+}
+
+#title, #image, #goal, #location {
+  min-width: 50vw;
+}
+
+#description {
+  min-width: 75vw;
+  height: 10vw;
+}
+
+label {
+  display: table-cell;
   text-align: center;
 }
 
 input{
   display: table-cell;
-  min-width: 10vh;
+  min-width: 10vw;
   margin-bottom: 10px;
   word-wrap: break-word;
 }
 
-form{
-padding: 10px;
-}
 
-textarea{
+/* textarea{
   width: 600px;
-}
+} */
 
 button{
   background-color: #9B2D1F;
