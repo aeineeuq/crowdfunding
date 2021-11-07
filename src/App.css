@@ -47,7 +47,8 @@ li{
   color: #f9f9f9;
   display: table-row;
   padding: 20px;
-  text-decoration: none;
+  text-decoration: underline white;
+  
 }
 
 #project-list {
@@ -87,6 +88,12 @@ div.cside {
   min-height: 30vw;
 }
 
+div.dside {
+  background-color: #D34817;
+  text-align: center;
+  min-height: 15vw;
+}
+
 form {
   display: table;
   padding: 10px;
@@ -94,11 +101,11 @@ form {
   }
 
 #title, #image, #goal, #location {
-  min-width: 70vw;
+  width: 70vw;
 }
 
 #description {
-  min-width: 75vw;
+  width: 70vw;
   height: 10vw;
 }
 
