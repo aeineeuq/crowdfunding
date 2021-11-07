@@ -23,7 +23,7 @@ const Nav = () => {
             <li> <h1><Link to="/">Pawtreon</Link></h1></li>
            { 
         token
-          ?<><button className="loginout" onClick={() => window.localStorage.clear()}>
+          ?<><button className="loginout" onClick={() => window.localStorage.clear() && history.push('/login')}>
               Log Out
             </button>
             </>
