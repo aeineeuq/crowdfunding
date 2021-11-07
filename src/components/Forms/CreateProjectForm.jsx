@@ -14,8 +14,7 @@ const CreateProjectForm = () => {
   });
 
   const [errors, setErrors] = useState([]);
-  const [setMessage] = useState("");
-
+  
   const handleChange = (e) => {
     setProjectData({
       ...projectData,
@@ -79,7 +78,6 @@ const CreateProjectForm = () => {
           }
         )
         .then((response) => { 
-          setMessage("Pawtreon Project is being published");
         return response.json();
       });
     };
