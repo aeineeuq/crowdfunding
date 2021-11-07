@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
-import "../App.css";
 
-function HomePage() {
+const HomePage = () => {
     const [projectList, setProjectList] = useState([]);
 
     useEffect(() => {
@@ -15,29 +14,10 @@ function HomePage() {
         });
     }, []);
 
-    const token = window.localStorage.getItem('token')
     return (
-      <div>
-        {
-          token ? (
-            <div> 
-              
-              {/* <form onSubmit={createProject}>
-                <div>
-                  <label htmlFor="username">Enter Project Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    placeholder="name"
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                </div>
-              </form> */}
-            </div>
-          ) : null
-        }
-  
+      <div> 
         {/* mapping over our projectList from state */}
+
         <div id="project-list">
           {projectList.map((project, key) => {
             return (
@@ -49,6 +29,6 @@ function HomePage() {
         </div>
       </div>
     )
-  }
+  }    
 
 export default HomePage;
