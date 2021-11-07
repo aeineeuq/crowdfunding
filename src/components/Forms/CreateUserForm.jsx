@@ -25,12 +25,12 @@ function RegisterForm() {
         e.preventDefault();
         postData()
             .then((response) => {
-                console.log('------response from my API --------')
                 history.push("/");
             })
     };
     return (
-        <div>
+        
+        <div className='cside'>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label>Username:</label>

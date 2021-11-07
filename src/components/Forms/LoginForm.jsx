@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "../../App.css";
 
 const LoginForm = () => {
@@ -51,7 +50,8 @@ const LoginForm = () => {
     <div className="cside">
     <form onSubmit={handleSubmit}>
       <div>
-        <h2>Ready to make a pawsitive change? Sign-in below</h2>
+        <h2>Ready to make a pawsitive change? </h2>
+        <h2>Sign-in</h2>
         <label>Username: </label>
         <input
           type="text"
@@ -72,7 +72,14 @@ const LoginForm = () => {
       <button type="submit">
         Login
       </button>
-    </form></div>
+    {/* </form> */}
+        <div>
+    <h2> Or Sign-up</h2>
+        <Link className="fakebutton" to="/Register">Create Account</Link>    
+    </div>
+
+    </form>
+        </div>
   )
 } 
 export default LoginForm

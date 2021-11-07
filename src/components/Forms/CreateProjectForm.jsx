@@ -14,7 +14,7 @@ const CreateProjectForm = () => {
   });
 
   const [errors, setErrors] = useState([]);
-  const [message, setMessage] = useState("");
+  const [setMessage] = useState("");
 
   const handleChange = (e) => {
     setProjectData({
@@ -89,23 +89,45 @@ const CreateProjectForm = () => {
       <h3>Post Your Pawtreon Project!</h3>
       <form id="project-form">
         <div>
-        <label>Project Title: </label>
-        <input type="text" id="title" placeholder="Hint: You can use your pet's name" onchange={handleChange} />
+          <label>Project Title: </label>
+          <input 
+          type="text" 
+          id="title" 
+          placeholder="Hint: You can use your pet's name" 
+          onChange={handleChange} />
+        </div>
+
+        <div>
+          <label>Project Description: </label>
+          <input
+          type="text"
+          id="description" 
+          placeholder="Hint: Tell us about about your project" 
+          onChange={handleChange} />
         </div>
         <div>
-        <label>Project Description: </label>
-        <input type="text" id="description" placeholder="Hint: Tell us about about your project" onchange={handleChange} />
+          <label>Goal: </label>
+          <input 
+          type="text" 
+          id="goal" 
+          placeholder="Hint: How many monies" 
+          onChange={handleChange} />
         </div>
         <div>
-        <label>Goal: </label>
-        <input type="text" id="goal" placeholder="Hint: How many monies" onchange={handleChange} />
+          <label>Image Link: </label>
+          <input 
+          type="text" 
+          id="image" 
+          placeholder="Hint: Post a pretty picture" 
+          onChange={handleChange} />
         </div>
         <div>
-        <label>Image Link: </label>
-        <input type="text" id="image" placeholder="Hint: Post a pretty picture" onchange={handleChange} />
-        </div>
-        <div>
-        <label>Post Code: </label><input type="text" id="location" placeholder="Hint: Where are you located" onchange={handleChange} />
+        <label>Post Code: </label>
+        <input 
+          type="text" 
+          id="location" 
+          placeholder="Hint: Where are you located" 
+          onChange={handleChange} />
         </div>
       </form>
       
