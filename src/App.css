@@ -22,6 +22,7 @@ h1 {
   font-family: 'Calibri', sans-serif;
   margin: auto;
   text-align: center;
+  font-size: xx-large;
 }
 
 h2 {
@@ -80,6 +81,7 @@ div.bside{
 
 div.cside{
   background-color: #CAB0A8;
+  text-align: center;
 }
 
 label{

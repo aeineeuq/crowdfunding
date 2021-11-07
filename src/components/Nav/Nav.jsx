@@ -22,13 +22,13 @@ function handleClick(e) {
   return (
 
     <nav>
-          <li className="dropdown">
+          {/* <li className="dropdown">
                     <a href="#" onClick={handleClick} className="drop">Explore</a>
                     <div className="dropdown-menu">
                     <Link to="/Register">Create Account</Link>               
                     <Link to="/createproject">Create Project</Link>                       
                     </div>
-            </li>
+            </li> */}
             <li> <h1><Link to="/">Pawtreon</Link></h1></li>
            { 
         token

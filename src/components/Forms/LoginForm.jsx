@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../../App.css";
 
 const LoginForm = () => {
    const [credentials, setCredentials] = useState({
@@ -43,8 +45,11 @@ const LoginForm = () => {
   };
 
   return (
+    <div className="cside">
     <form onSubmit={handleSubmit}>
       <div>
+        {/* class a div to a grid thingy so the label and input line are on the same line */}
+        <h2>Ready to make a pawsitive change? Sign-in below</h2>
         <label>Username:</label>
         <input
           type="text"
@@ -65,7 +70,7 @@ const LoginForm = () => {
       <button type="submit">
         Login
       </button>
-    </form>
+    </form></div>
   )
 } 
 export default LoginForm
