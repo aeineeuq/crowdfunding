@@ -57,9 +57,7 @@ li{
 }
 
 #projectcard{
-  /* align-self: start; */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   column-gap: 10px;
   row-gap: 10px;
   padding: 10px;
@@ -67,7 +65,7 @@ li{
 
 div.aside{
   border-top-left-radius:0px;
-  border-bottom-right-radius:0px;
+  border-bottom-right-radius:25px;
   /* min-width: 25vw; */
   /* min-height: 90vh; */
   }
@@ -75,15 +73,12 @@ div.aside{
 div.bside{
   display:inline-block;
   background-color: #A28E6A;
-  border-top-left-radius:0px;
-  border-bottom-left-radius:0px;
   color: white;
-  /* width: 65vw; */
+  max-width: 85vw;
   /* min-height:90vh; */
 }
 
 div.cside{
-  display:inline;
   background-color: #CAB0A8;
 }
 
