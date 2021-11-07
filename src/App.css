@@ -89,9 +89,10 @@ div.cside {
 }
 
 div.dside {
-  background-color: #D34817;
+  background-color: #CAB0A8;
   text-align: center;
-  min-height: 15vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 form {

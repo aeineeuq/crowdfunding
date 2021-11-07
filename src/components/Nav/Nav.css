@@ -53,3 +53,12 @@ display: block;
   font-size: 14px;
   align-self: right;
 }
+
+div.footer {
+  border-bottom-left-radius:25px;
+  border-bottom-right-radius:25px;
+  color: black;
+  background-color: #D34817;
+  width: auto;
+  min-height: 100%;
+  }
