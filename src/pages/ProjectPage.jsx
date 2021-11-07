@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { Link,useParams, useHistory } from 'react-router-dom';
 import PledgeButton from '../components/PledgeButton';
 import "../App.css";
 
@@ -43,8 +43,15 @@ function ProjectPage() {
                     </li>
                     );
                 })}
-                <PledgeButton /></ul>
-        </div></div>
+                {/* <PledgeButton /> */}
+                </ul>
+        </div>
+
+        <div className="dside">
+        <Link className="fakebutton" to="/createproject">Post Your Own Project</Link>      
+        </div>
+
+        </div>
         </div>
         );
     }    
