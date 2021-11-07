@@ -56,5 +56,3 @@ function handleClick(e) {
 }
 
 export default Nav
-// logging in goes to homepage, next release for login direct to users own page
-// login is a link which looks like a button, next release for actual login button

@@ -39,10 +39,11 @@ const LoginForm = () => {
         console.log(window.location)
         window.location=`${window.location.origin}/`
         history.push("/");
-        // history.push("/CreateProjectPage");
-        console.log(response);
-        console.log(window.location)
-        window.location = `${window.location.origin}/`
+
+        // console.log(response);
+        // console.log(window.location)
+        // window.location = `${window.location.origin}/`
+         window.location = `/createproject`
       });
     }
   };

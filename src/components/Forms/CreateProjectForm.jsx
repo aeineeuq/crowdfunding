@@ -129,11 +129,11 @@ const CreateProjectForm = () => {
           placeholder="Hint: Where are you located" 
           onChange={handleChange} />
         </div>
-      </form>
       
       <button type="submit" onClick={handleSubmit}>
             Submit
       </button>
+      </form>
       </div>
     )
   
