@@ -1,7 +1,9 @@
 nav {
   background-color: #D34817;
   width: auto;
-  border-radius: 25px;
+  /* border-radius: 25px; */
+  border-top-left-radius:25px;
+  border-top-right-radius:25px;
 }
 
 li a, .drop {

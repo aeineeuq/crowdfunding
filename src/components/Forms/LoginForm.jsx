@@ -32,6 +32,7 @@ const LoginForm = () => {
   };
 
   const handleSubmit = (e) => {
+    console.log("log in, in progress")
     e.preventDefault();
     if (credentials.username && credentials.password) {
       postData().then((response) => {
@@ -40,6 +41,8 @@ const LoginForm = () => {
         window.location=`${window.location.origin}/`
         history.push("/");
         console.log(response);
+        console.log(window.location)
+        window.location = `${window.location.origin}/`
       });
     }
   };
@@ -48,9 +51,8 @@ const LoginForm = () => {
     <div className="cside">
     <form onSubmit={handleSubmit}>
       <div>
-        {/* class a div to a grid thingy so the label and input line are on the same line */}
         <h2>Ready to make a pawsitive change? Sign-in below</h2>
-        <label>Username:</label>
+        <label>Username: </label>
         <input
           type="text"
           id="username"
@@ -59,7 +61,7 @@ const LoginForm = () => {
         />
       </div>
       <div>
-        <label>Password:</label>
+        <label>Password: </label>
         <input
           type="password"
           id="password"

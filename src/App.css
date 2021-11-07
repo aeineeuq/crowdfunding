@@ -67,7 +67,7 @@ li{
 div.aside{
   border-top-left-radius:0px;
   border-bottom-right-radius:25px;
-  /* min-width: 25vw; */
+  width: 25vw;
   /* min-height: 90vh; */
   }
 
@@ -75,17 +75,19 @@ div.bside{
   display:inline-block;
   background-color: #A28E6A;
   color: white;
-  max-width: 85vw;
+  width: 75vw;
   /* min-height:90vh; */
 }
 
 div.cside{
   background-color: #CAB0A8;
   text-align: center;
+  padding: 10px;
 }
 
 label{
-  display: table-cell;
+  /* display: table-cell; */
+  text-align: center;
 }
 
 input{
@@ -93,6 +95,10 @@ input{
   width: 600px;
   margin-bottom: 10px;
   word-wrap: break-word;
+}
+
+form{
+padding: 10px;
 }
 
 textarea{
