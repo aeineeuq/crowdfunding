@@ -1,12 +1,21 @@
 // These are our NPM modules from https://npmjs.com/
-import React from 'react'
+import React, {useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import './Nav.css';
 
 const Nav = () => {
-  const history = useHistory();
-  const token = window.localStorage.getItem('token')
-  function handleClick(e) {
+const token = window.localStorage.getItem('token')
+// const history = useHistory();
+const [userToken, setUserToken ] = useState(token)
+
+const handleLogOut = () => {
+  console.log('Logging out')
+  window.localStorage.removeItem('token')
+  setUserToken(null)
+  console.log('token is: ', window.localStorage.getItem('token'))
+}
+
+function handleClick(e) {
     e.preventDefault();
 }
 
@@ -23,7 +32,7 @@ const Nav = () => {
             <li> <h1><Link to="/">Pawtreon</Link></h1></li>
            { 
         token
-          ?<><button className="loginout" onClick={() => window.localStorage.clear() && history.push('/login')}>
+          ?<><button className="loginout" onClick={handleLogOut}>
               Log Out
             </button>
             </>
@@ -38,3 +47,5 @@ const Nav = () => {
 }
 
 export default Nav
+// logging in goes to homepage, next release for login direct to users own page
+// login is a link which looks like a button, next release for actual login button

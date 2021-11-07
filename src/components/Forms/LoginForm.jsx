@@ -36,7 +36,7 @@ const LoginForm = () => {
         window.localStorage.setItem("token", response.token);
         console.log(window.location)
         window.location=`${window.location.origin}/`
-        // history.push("/");
+        history.push("/");
         console.log(response);
       });
     }
