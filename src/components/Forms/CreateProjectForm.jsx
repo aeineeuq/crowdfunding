@@ -22,10 +22,7 @@ const CreateProjectForm = () => {
         });
       };
       const postData = async () => {
-        console.log('Im posting a project to your API');
         const token = window.localStorage.getItem('token');
-        console.log("What is token: ", token)
-        console.log(projectInfo)
         const response = await fetch(`${process.env.REACT_APP_API_URL}projects/`, {
           method: 'post',
           headers: {
@@ -40,14 +37,12 @@ const CreateProjectForm = () => {
       };
       const handleSubmit = (e) => {
         e.preventDefault();
-        // if (window.localStorage.getItem('token')) {
+        if (window.localStorage.getItem('token')) {
         postData().then((response) => {
-          console.log(response)
-        //   console.log('response from our API --------', response);
-          // window.localStorage.setItem('token', response.token);
-          // history.push('/');
+          window.localStorage.setItem('token', response.token);
+          history.push('/');
         });
-        // }
+        }
       };
       return (
           <div id="project-form-container" className="form-container">
