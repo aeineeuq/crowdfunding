@@ -2,42 +2,45 @@ import React, { useState } from 'react'
 import { useHistory } from "react-router-dom";
 
 const LoginForm = () => {
-  const history = useHistory();
    const [credentials, setCredentials] = useState({
     username: '',
-    password: ''
-  })
+    password: '',
+  });
+  const history = useHistory();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setCredentials((prevCredentials) => { 
-      return { 
-        ...prevCredentials, 
-        [id]: value,
-      }
-    })
-  }
+    setCredentials((prevCredentials) => ({ 
+    ...prevCredentials, 
+    [id]: value,
+    }));
+  };
 
     const postData = async () => {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}api-token-auth/`, {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}api-token-auth/`,
+    {
       method: "post",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(credentials),
-    })
+    }
+    );
     return response.json()
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (credentials.username && credentials.password) {
       postData().then((response) => {
         window.localStorage.setItem("token", response.token);
-        history.push('/')
-      })
+        console.log(window.location)
+        window.location=`${window.location.origin}/`
+        // history.push("/");
+        console.log(response);
+      });
     }
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit}>
