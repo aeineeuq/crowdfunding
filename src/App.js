@@ -9,8 +9,6 @@ import ProjectPage from './pages/ProjectPage';
 import CreateProjectPage from './pages/CreateProjectPage'
 import Register from './pages/RegisterPage'
 import EditProjectPage from './pages/EditProjectPage';
-import PostPledge from './pages/PostPledge';
-import ErrorPage from './pages/Error';
 
 function App() {
   return (
@@ -19,25 +17,21 @@ function App() {
      <Nav />
    
     <Switch>
-       <Route path="/error">
-          <ErrorPage />
-        </Route>
         <Route path="/project/:id">
           <ProjectPage />
         </Route>
-        <Route  path='/createproject'>
-            <CreateProjectPage />
+
+        
         <Route path="/editproject/:id">
             <EditProjectPage />
           </Route>
         {/* <Route path="/users/:id">
             <UserPage />
         </Route> */}
+        <Route exact path='/createproject'>
+            <CreateProjectPage />
         </Route>
-        <Route path='/postpledge'>
-            <PostPledge />
-        </Route>
-        <Route path='/register'>
+        <Route exact path='/register'>
             <Register />
         </Route>
         <Route path="/login">

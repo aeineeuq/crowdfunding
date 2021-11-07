@@ -9,7 +9,6 @@ header {
   background-color: #D34817 ;
 }
 
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -43,8 +42,10 @@ p {
 }
 
 li{
+  color: white;
   display: table-row;
   padding: 20px;
+  text-decoration: none;
 }
 
 #project-list {
@@ -56,16 +57,16 @@ li{
 }
 
 #projectcard{
+  /* align-self: start; */
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 10px;
   row-gap: 10px;
   padding: 10px;
 }
 
 div.aside{
-  background-color:#B0D0D3;
-  border-top-right-radius:0px;
+  border-top-left-radius:0px;
   border-bottom-right-radius:0px;
   /* min-width: 25vw; */
   /* min-height: 90vh; */
@@ -73,11 +74,17 @@ div.aside{
 
 div.bside{
   display:inline-block;
-  background-color: #FFCAD4;
+  background-color: #A28E6A;
   border-top-left-radius:0px;
   border-bottom-left-radius:0px;
+  color: white;
   /* width: 65vw; */
   /* min-height:90vh; */
+}
+
+div.cside{
+  display:inline;
+  background-color: #CAB0A8;
 }
 
 label{
