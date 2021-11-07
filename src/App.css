@@ -27,7 +27,7 @@ h1 {
 
 h2 {
   font-family: 'Calibri', sans-serif;
-  margin: auto;
+  /* margin: auto; */
   text-align: center;
 }
 
@@ -43,7 +43,7 @@ p {
 }
 
 li{
-  color: white;
+  color: #f9f9f9;
   display: table-row;
   padding: 20px;
   text-decoration: none;
@@ -74,15 +74,16 @@ div.aside{
 div.bside{
   display:inline-block;
   background-color: #A28E6A;
-  color: white;
+  color: #f9f9f9;
   width: 75vw;
   /* min-height:90vh; */
 }
 
 div.cside{
   background-color: #CAB0A8;
-  text-align: center;
+  text-align: left;
   padding: 10px;
+  height: 30vw;
 }
 
 label{
@@ -92,7 +93,7 @@ label{
 
 input{
   display: table-cell;
-  width: 600px;
+  min-width: 10vh;
   margin-bottom: 10px;
   word-wrap: break-word;
 }
@@ -106,6 +107,8 @@ textarea{
 }
 
 button{
+  background-color: #9B2D1F;
+  color: #f9f9f9;
   font: 'Calibri';
   font-family: 'Calibri', sans-serif;
   text-align: center;
@@ -122,4 +125,8 @@ button{
   border-style: none;
   border-color: none;
   border-radius: 25px;
+  min-width: 15vw;
+  padding: 14px 16px;
+  font-size: 16px;
 }
+

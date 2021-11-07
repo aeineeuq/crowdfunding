@@ -43,12 +43,13 @@ display: block;
 }
 
 .loginout { 
-  min-width: 20vw;
+  min-width: 10vw;
   background-color: #A0442B;
   padding: 14px 16px;
   color: #f9f9f9;
   font: 'Calibri';
   border-radius: 25px;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
+  align-self: right;
 }
