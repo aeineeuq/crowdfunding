@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import PledgeButton from '../components/PledgeButton';
 import "../App.css";
 
 function ProjectPage() {
     const [projectData, setProjectData] = useState({ pledges: [] });
+    const history = useHistory();
     const { id } = useParams();
     
     useEffect(() => {
@@ -16,19 +17,24 @@ function ProjectPage() {
     }, []);
 
     return (
+        <div>
         <div id="projectcard">
-            <div class="aside">
-                <img src={projectData.image} />
+            <div className="aside">
+                <img src={projectData.image} alt=""/>
                 <PledgeButton />
             </div>
-        <div>
-        <div class="bside">
+        
+        <div className="bside">
             <h2>{projectData.title}</h2>
             <h3>Created at: {projectData.date_created}</h3>
             <h3>Created by: {projectData.owner} </h3>
             <h3>{`Status: ${projectData.is_open}`}</h3>
             <p>{projectData.description}</p>
-                    <h3>Pledges:</h3>
+
+        </div></div>
+        <div>
+        <div className="cside">
+                    <h3>Suppawters:</h3>
             <ul>
                 {projectData.pledges.map((pledgeData, key) =>{
                     return (
@@ -37,11 +43,9 @@ function ProjectPage() {
                     </li>
                     );
                 })}
-                </ul>
+                <PledgeButton /></ul>
+        </div></div>
         </div>
-        </div>
-        </div>
-
         );
     }    
 
