@@ -10,14 +10,14 @@ The project requirements are to create a crowdfunding website with the API built
 Pawtreon aims to be a platform for animal lovers to post projects and gain funding support.
 
 Links to Part A Submission
-[GitHub Link] (https://github.com/aeineeuq/Pawtreon)
+[GitHub Link](https://github.com/aeineeuq/Pawtreon)
 [Heroku App Link](https://fierce-falls-82144.herokuapp.com/)
 
 
 Part B Submission
 ---------
 Links to Part B Submission
-[GitHub Link] (https://github.com/aeineeuq/crowdfunding)
+[GitHub Link](https://github.com/aeineeuq/crowdfunding)
 [Heroku App Link](https://obscure-plains-79907.herokuapp.com/)
 
 Screenshots
